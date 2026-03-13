@@ -1,0 +1,15 @@
+{
+  "name": "Functional - Error Handling in process_message",
+  "description": "Checks that process_message returns a fallback error message when the LLM client raises an exception.",
+  "test_type": "functional",
+  "input": "A user message and a mock LLM client that raises an exception.",
+  "output": "A fallback error message string is returned.",
+  "success_criteria": [
+    "Returned message matches the fallback error message",
+    "No unhandled exception is raised"
+  ],
+  "error_scenarios": [
+    "Unhandled exception is raised",
+    "Returned message does not match fallback"
+  ]
+}
