@@ -1,0 +1,16 @@
+{
+  "name": "Integration - Main Agent Loop User Interaction",
+  "description": "Tests the main agent loop by simulating user input and verifying that the agent processes the input and outputs the expected response.",
+  "test_type": "integration",
+  "input": "Simulated user input sequence: ['Hello', 'quit'], with environment variables and a mock LLM client.",
+  "output": "Agent prints the expected response for 'Hello' and exits on 'quit'.",
+  "success_criteria": [
+    "Agent prints greeting message",
+    "Agent prints LLM response for 'Hello'",
+    "Agent prints 'Goodbye!' and exits on 'quit'"
+  ],
+  "error_scenarios": [
+    "Agent does not exit on 'quit'",
+    "Agent does not print expected responses"
+  ]
+}
