@@ -1,0 +1,15 @@
+{
+  "name": "Integration - Main Agent Loop Exit",
+  "description": "Verifies that the agent's main loop exits gracefully when the user types 'quit'.",
+  "test_type": "integration",
+  "input": "Simulated user input sequence: ['quit']",
+  "output": "Agent prints 'Goodbye!' and exits the loop.",
+  "success_criteria": [
+    "'Goodbye!' is printed to stdout",
+    "Agent loop terminates without exception"
+  ],
+  "error_scenarios": [
+    "Agent does not exit on 'quit'",
+    "Unexpected exception during loop exit"
+  ]
+}
