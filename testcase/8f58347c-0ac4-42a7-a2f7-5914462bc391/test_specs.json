@@ -1,0 +1,16 @@
+{
+  "name": "Integration - Agent Main Loop User Interaction",
+  "description": "Tests the main agent loop for correct user interaction, including handling of 'quit' command and message processing.",
+  "test_type": "integration",
+  "input": "Simulated user inputs: a valid message and then 'quit', with LLM client mocked to return a canned response.",
+  "output": "Agent prints the response to the user message and exits gracefully on 'quit'.",
+  "success_criteria": [
+    "Agent prints expected response for user message",
+    "Agent prints 'Goodbye!' and exits on 'quit'",
+    "No unhandled exceptions are raised"
+  ],
+  "error_scenarios": [
+    "KeyboardInterrupt during input",
+    "LLM client raises an exception"
+  ]
+}
