@@ -1,0 +1,16 @@
+{
+  "name": "Process Message Returns LLM Response",
+  "description": "Ensures that process_message returns a valid string response from the LLM when given a user message.",
+  "test_type": "integration",
+  "input": "A sample user message string, valid agent configuration, and a mocked AsyncOpenAI client returning a sample response.",
+  "output": "A string response from the agent.",
+  "success_criteria": [
+    "Response is not None",
+    "Response is a string",
+    "Response matches the mocked LLM output"
+  ],
+  "error_scenarios": [
+    "LLM client raises an exception",
+    "Response is None or not a string"
+  ]
+}
