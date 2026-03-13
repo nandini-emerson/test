@@ -1,0 +1,15 @@
+{
+  "name": "Functional - Error Handling in Message Processing",
+  "description": "Ensures that the agent returns a user-friendly error message when the LLM client raises an exception during message processing.",
+  "test_type": "functional",
+  "input": "A valid user message string, with LLM client mocked to raise an exception.",
+  "output": "A fallback error message string from the agent.",
+  "success_criteria": [
+    "response is not None",
+    "response is a string",
+    "response contains 'I apologize, but I encountered an error'"
+  ],
+  "error_scenarios": [
+    "LLM client raises an exception"
+  ]
+}
