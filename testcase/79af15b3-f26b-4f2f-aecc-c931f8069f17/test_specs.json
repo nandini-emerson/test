@@ -1,0 +1,15 @@
+{
+  "name": "Integration - Anthropic Provider API Key Validation",
+  "description": "Ensures that the Config class raises a ValueError if the Anthropic API key is missing when Anthropic is the provider.",
+  "test_type": "integration",
+  "input": "Environment variable LLM_PROVIDER set to 'anthropic' and ANTHROPIC_API_KEY unset.",
+  "output": "ValueError is raised indicating missing ANTHROPIC_API_KEY.",
+  "success_criteria": [
+    "ValueError is raised",
+    "Error message contains 'ANTHROPIC_API_KEY is required'"
+  ],
+  "error_scenarios": [
+    "No error is raised when API key is missing",
+    "Incorrect error message"
+  ]
+}
