@@ -1,0 +1,15 @@
+{
+  "name": "Agent Main Loop Integration",
+  "description": "Tests the main agent loop by simulating user input and verifying agent responses and exit behavior.",
+  "test_type": "integration",
+  "input": "Simulated user inputs: a valid message and then 'quit'. Mocked process_message to return a canned response.",
+  "output": "Agent prints response and exits gracefully on 'quit'.",
+  "success_criteria": [
+    "Agent prints expected response for user message",
+    "Agent prints 'Goodbye!' and exits on 'quit'"
+  ],
+  "error_scenarios": [
+    "Agent does not exit on 'quit'",
+    "Agent does not print expected responses"
+  ]
+}
