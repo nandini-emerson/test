@@ -1,0 +1,15 @@
+{
+  "name": "Process Message Handles LLM Exception Gracefully",
+  "description": "Verifies that process_message returns an error message when the LLM client raises an exception.",
+  "test_type": "functional",
+  "input": "A user message and a mocked LLM client that raises an exception.",
+  "output": "A user-friendly error message string.",
+  "success_criteria": [
+    "Response contains apology or error message",
+    "No unhandled exceptions are raised"
+  ],
+  "error_scenarios": [
+    "Unhandled exception propagates",
+    "Response does not indicate an error"
+  ]
+}
