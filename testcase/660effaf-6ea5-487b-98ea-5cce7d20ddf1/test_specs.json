@@ -1,0 +1,14 @@
+{
+  "name": "Config Class Validates API Keys for OpenAI",
+  "description": "Checks that the Config class raises a ValueError if OPENAI_API_KEY is missing when LLM_PROVIDER is 'openai'.",
+  "test_type": "functional",
+  "input": "Environment variable LLM_PROVIDER set to 'openai', OPENAI_API_KEY missing.",
+  "output": "ValueError is raised indicating missing OPENAI_API_KEY.",
+  "success_criteria": [
+    "ValueError is raised",
+    "Error message contains 'OPENAI_API_KEY is required'"
+  ],
+  "error_scenarios": [
+    "No exception raised when API key is missing"
+  ]
+}
