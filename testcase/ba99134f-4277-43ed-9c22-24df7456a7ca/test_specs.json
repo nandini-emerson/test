@@ -1,0 +1,19 @@
+{
+  "name": "Integration - Configuration Loading from Environment",
+  "description": "Verifies that the agent loads configuration from environment variables and initializes the LLM client accordingly.",
+  "test_type": "integration",
+  "input": "Set environment variables for LLM_PROVIDER, LLM_MODEL, LLM_TEMPERATURE, LLM_MAX_TOKENS, and OPENAI_API_KEY.",
+  "output": "AgentConfig instance with values matching the environment variables and a properly initialized LLM client.",
+  "success_criteria": [
+    "AgentConfig.llm_provider matches environment variable",
+    "AgentConfig.model matches environment variable",
+    "AgentConfig.temperature matches environment variable",
+    "AgentConfig.max_tokens matches environment variable",
+    "AgentConfig.api_key matches environment variable",
+    "LLM client is initialized without error"
+  ],
+  "error_scenarios": [
+    "Missing required API key",
+    "Invalid environment variable values"
+  ]
+}
