@@ -1,0 +1,15 @@
+{
+  "name": "Functional - Error Handling in process_message",
+  "description": "Checks that process_message returns a user-friendly error message when an exception occurs during LLM call.",
+  "test_type": "functional",
+  "input": "A user message that triggers an exception in the LLM client (e.g., by mocking the client to raise an exception).",
+  "output": "A string apologizing for the error is returned.",
+  "success_criteria": [
+    "response is a string",
+    "response contains 'I apologize, but I encountered an error processing your request'"
+  ],
+  "error_scenarios": [
+    "Exception is not caught",
+    "No error message is returned to the user"
+  ]
+}
