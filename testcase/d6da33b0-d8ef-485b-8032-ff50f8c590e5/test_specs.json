@@ -1,0 +1,16 @@
+{
+  "name": "Agent Initialization with Valid OpenAI API Key",
+  "description": "Validates that the agent initializes correctly when the OPENAI_API_KEY is present in the environment.",
+  "test_type": "functional",
+  "input": "Environment variables set with OPENAI_API_KEY and default LLM_PROVIDER=openai.",
+  "output": "Agent instance is created without errors.",
+  "success_criteria": [
+    "AgentConfig is loaded with correct values",
+    "llm_client is initialized as AsyncOpenAI",
+    "No exceptions are raised during initialization"
+  ],
+  "error_scenarios": [
+    "OPENAI_API_KEY missing",
+    "Invalid API key format"
+  ]
+}
