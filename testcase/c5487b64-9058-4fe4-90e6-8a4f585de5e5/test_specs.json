@@ -1,0 +1,14 @@
+{
+  "name": "Config Class Validates Anthropic API Key",
+  "description": "Checks that the Config class raises a ValueError if LLM_PROVIDER is set to 'anthropic' but ANTHROPIC_API_KEY is missing.",
+  "test_type": "functional",
+  "input": "Environment variables with LLM_PROVIDER=anthropic and no ANTHROPIC_API_KEY.",
+  "output": "ValueError is raised indicating missing ANTHROPIC_API_KEY.",
+  "success_criteria": [
+    "ValueError is raised",
+    "Error message contains 'ANTHROPIC_API_KEY is required'"
+  ],
+  "error_scenarios": [
+    "Config initializes without raising error despite missing key"
+  ]
+}
