@@ -1,0 +1,17 @@
+{
+  "name": "Main Agent Loop Integration Test",
+  "description": "Simulates the main agent loop, sending reflective user inputs and verifying agent responses and exit behavior.",
+  "test_type": "integration",
+  "input": "Simulated user inputs: a valid message, then 'quit'. LLM client is mocked to return canned responses.",
+  "output": "Agent prints expected responses and exits gracefully on 'quit'.",
+  "success_criteria": [
+    "Agent prints the expected LLM response for the user message",
+    "Agent prints 'Goodbye!' and exits when 'quit' is entered",
+    "No unhandled exceptions occur during the loop"
+  ],
+  "error_scenarios": [
+    "Agent does not exit on 'quit'",
+    "Agent does not print expected responses",
+    "Unhandled exceptions in the loop"
+  ]
+}
