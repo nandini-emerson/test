@@ -1,0 +1,15 @@
+{
+  "name": "Functional - Unsupported LLM Provider",
+  "description": "Checks that initializing the agent with an unsupported LLM provider raises a ValueError.",
+  "test_type": "functional",
+  "input": "Environment variable LLM_PROVIDER set to an unsupported value (e.g., 'unknown').",
+  "output": "ValueError is raised with appropriate error message.",
+  "success_criteria": [
+    "ValueError is raised",
+    "Error message contains 'Unsupported LLM provider'"
+  ],
+  "error_scenarios": [
+    "No error is raised for unsupported provider",
+    "Incorrect error message"
+  ]
+}
