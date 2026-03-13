@@ -1,0 +1,18 @@
+{
+  "name": "Functional - Successful Message Processing",
+  "description": "Validates that the agent processes a user message and returns a valid response from the LLM when configuration and API key are correct.",
+  "test_type": "functional",
+  "input": "A valid user message string and environment variables set for OpenAI provider and API key.",
+  "output": "A non-empty string response from the agent.",
+  "success_criteria": [
+    "response is not None",
+    "response is a string",
+    "response is not empty",
+    "no error message is returned"
+  ],
+  "error_scenarios": [
+    "LLM API returns an error",
+    "API key is invalid or missing",
+    "Unexpected exception in process_message"
+  ]
+}
