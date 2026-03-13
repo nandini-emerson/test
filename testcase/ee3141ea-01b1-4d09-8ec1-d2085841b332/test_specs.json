@@ -1,0 +1,14 @@
+{
+  "name": "Agent Initialization with Unsupported LLM Provider",
+  "description": "Checks that initializing the agent with an unsupported LLM provider raises a ValueError.",
+  "test_type": "functional",
+  "input": "Environment variable LLM_PROVIDER set to 'unsupported_llm', OPENAI_API_KEY present.",
+  "output": "ValueError is raised indicating unsupported LLM provider.",
+  "success_criteria": [
+    "ValueError is raised",
+    "Error message contains 'Unsupported LLM provider'"
+  ],
+  "error_scenarios": [
+    "No exception raised for unsupported provider"
+  ]
+}
