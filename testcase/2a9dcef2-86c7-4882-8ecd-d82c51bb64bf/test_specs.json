@@ -1,0 +1,16 @@
+{
+  "name": "Process Message Returns LLM Response",
+  "description": "Tests that process_message returns a valid string response from the LLM client when given a user message.",
+  "test_type": "integration",
+  "input": "A sample user message string and a mocked LLM client returning a known response.",
+  "output": "The returned string matches the mocked LLM response.",
+  "success_criteria": [
+    "Returned response is not None",
+    "Returned response is a string",
+    "Returned response matches expected content from mock"
+  ],
+  "error_scenarios": [
+    "LLM client raises an exception",
+    "Returned response is None or not a string"
+  ]
+}
