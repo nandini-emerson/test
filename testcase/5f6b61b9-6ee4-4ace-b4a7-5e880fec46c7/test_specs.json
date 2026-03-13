@@ -1,0 +1,17 @@
+{
+  "name": "Functional - Successful Message Processing",
+  "description": "Validates that the agent processes a user message and returns a non-empty response when LLM client is properly configured.",
+  "test_type": "functional",
+  "input": "A valid user message string, with environment variables set for OpenAI and a mocked LLM client returning a sample response.",
+  "output": "A non-empty string response from the agent.",
+  "success_criteria": [
+    "response is not None",
+    "response is a string",
+    "response is not empty",
+    "response matches the mocked LLM output"
+  ],
+  "error_scenarios": [
+    "LLM client raises an exception",
+    "Environment variables are missing"
+  ]
+}
