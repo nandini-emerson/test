@@ -1,0 +1,14 @@
+{
+  "name": "Agent Initialization Fails Without Required API Key",
+  "description": "Ensures that the agent raises a ValueError when the required API key for the selected LLM provider is missing.",
+  "test_type": "functional",
+  "input": "Environment variables set with LLM_PROVIDER=openai but OPENAI_API_KEY is missing.",
+  "output": "ValueError is raised indicating missing API key.",
+  "success_criteria": [
+    "ValueError is raised",
+    "Error message contains 'OPENAI_API_KEY is required'"
+  ],
+  "error_scenarios": [
+    "Agent initializes without raising error despite missing API key"
+  ]
+}
