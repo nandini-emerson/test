@@ -1,0 +1,16 @@
+{
+  "name": "Integration - Main Agent Loop User Interaction",
+  "description": "Tests the main agent loop by simulating user input and verifying that the agent responds appropriately and exits on 'quit'.",
+  "test_type": "integration",
+  "input": "Simulated user inputs: a valid message followed by 'quit'.",
+  "output": "Agent prints a response to the first message and exits gracefully after 'quit'.",
+  "success_criteria": [
+    "Agent prints a response to the user message",
+    "Agent prints 'Goodbye!' and exits on 'quit'"
+  ],
+  "error_scenarios": [
+    "Agent does not respond to user input",
+    "Agent does not exit on 'quit'",
+    "Unhandled exceptions in main loop"
+  ]
+}
