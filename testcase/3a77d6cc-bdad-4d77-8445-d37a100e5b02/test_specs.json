@@ -1,0 +1,15 @@
+{
+  "name": "Integration - LLM Provider Selection and Initialization",
+  "description": "Verifies that the agent initializes the correct LLM client based on the LLM_PROVIDER environment variable and raises an error for unsupported providers.",
+  "test_type": "integration",
+  "input": "Environment variable LLM_PROVIDER set to 'openai', 'anthropic', and an unsupported value.",
+  "output": "Correct client is initialized for supported providers; ValueError is raised for unsupported provider.",
+  "success_criteria": [
+    "AsyncOpenAI client is initialized when LLM_PROVIDER is 'openai'",
+    "ValueError is raised for unsupported provider"
+  ],
+  "error_scenarios": [
+    "Incorrect client is initialized",
+    "No error is raised for unsupported provider"
+  ]
+}
