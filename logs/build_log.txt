@@ -1,0 +1,57 @@
+2026-03-13 18:06:25 | INFO     | build_process:780 | Starting build process...
+2026-03-13 18:06:25 | INFO     | build_process:975 | Initializing code generation agent...
+2026-03-13 18:06:25 | INFO     | build_process:992 | Generating agent code...
+2026-03-13 18:06:25 | INFO     | modules.builder.code_generation_agent:41 | Starting code generation process
+2026-03-13 18:06:25 | INFO     | modules.builder.code_generation_agent:42 | Generating components: main_agent_code, config_code, requirements_code, readme_code, test_code, deployment_config
+2026-03-13 18:06:25 | INFO     | modules.builder.code_generation_agent:46 | Generating main agent code...
+2026-03-13 18:06:25 | INFO     | modules.builder.code_generation_agent:91 | Attempting to generate main agent code using LLM
+2026-03-13 18:06:25 | WARNING  | modules.builder.code_generation_agent:113 | LLM code generation failed: AzureProvider.invoke() got an unexpected keyword argument 'is_code_generation'
+Traceback (most recent call last):
+  File "C:\Users\vbhaskardonthula\Desktop\Project\Emerson\agent-building-agent\backend\modules\builder\code_generation_agent.py", line 93, in _generate_main_agent_code
+    response = self.llm_ctl.invoke(
+               ^^^^^^^^^^^^^^^^^^^^
+TypeError: AzureProvider.invoke() got an unexpected keyword argument 'is_code_generation'
+2026-03-13 18:06:25 | INFO     | modules.builder.code_generation_agent:114 | Using fallback agent code instead
+2026-03-13 18:06:25 | INFO     | modules.builder.code_generation_agent:48 | Main agent code generated successfully: 4964 characters
+2026-03-13 18:06:25 | INFO     | modules.builder.code_generation_agent:51 | Generating configuration code...
+2026-03-13 18:06:25 | INFO     | modules.builder.code_generation_agent:131 | Attempting to generate config code using LLM
+2026-03-13 18:06:25 | WARNING  | modules.builder.code_generation_agent:185 | LLM config code generation failed: AzureProvider.invoke() got an unexpected keyword argument 'is_code_generation'
+Traceback (most recent call last):
+  File "C:\Users\vbhaskardonthula\Desktop\Project\Emerson\agent-building-agent\backend\modules\builder\code_generation_agent.py", line 141, in _generate_config_code
+    response = self.llm_ctl.invoke(
+               ^^^^^^^^^^^^^^^^^^^^
+TypeError: AzureProvider.invoke() got an unexpected keyword argument 'is_code_generation'
+2026-03-13 18:06:25 | INFO     | modules.builder.code_generation_agent:186 | Using fallback config code instead
+2026-03-13 18:06:25 | INFO     | modules.builder.code_generation_agent:53 | Configuration code generated successfully: 1475 characters
+2026-03-13 18:06:25 | INFO     | modules.builder.code_generation_agent:56 | Generating requirements.txt...
+2026-03-13 18:06:25 | INFO     | modules.builder.code_generation_agent:197 | Attempting to generate requirements.txt using LLM analysis
+2026-03-13 18:06:25 | WARNING  | modules.builder.code_generation_agent:220 | LLM requirements.txt generation failed: AzureProvider.invoke() got an unexpected keyword argument 'is_code_generation'
+Traceback (most recent call last):
+  File "C:\Users\vbhaskardonthula\Desktop\Project\Emerson\agent-building-agent\backend\modules\builder\code_generation_agent.py", line 201, in _generate_requirements_code
+    response = self.llm_ctl.invoke(
+               ^^^^^^^^^^^^^^^^^^^^
+TypeError: AzureProvider.invoke() got an unexpected keyword argument 'is_code_generation'
+2026-03-13 18:06:25 | INFO     | modules.builder.code_generation_agent:221 | Using fallback requirements code instead
+2026-03-13 18:06:25 | INFO     | modules.builder.code_generation_agent:58 | Requirements code generated successfully: 104 characters
+2026-03-13 18:06:25 | INFO     | modules.builder.code_generation_agent:61 | Generating README.md...
+2026-03-13 18:06:25 | INFO     | modules.builder.code_generation_agent:226 | Generating README.md using template
+2026-03-13 18:06:25 | INFO     | modules.builder.code_generation_agent:243 | README.md generated successfully
+2026-03-13 18:06:25 | INFO     | modules.builder.code_generation_agent:63 | README code generated successfully: 887 characters
+2026-03-13 18:06:25 | INFO     | modules.builder.code_generation_agent:66 | Generating test code...
+2026-03-13 18:06:25 | INFO     | modules.builder.code_generation_agent:251 | Generating test code using template
+2026-03-13 18:06:25 | INFO     | modules.builder.code_generation_agent:267 | Test code generated successfully
+2026-03-13 18:06:25 | INFO     | modules.builder.code_generation_agent:68 | Test code generated successfully: 1091 characters
+2026-03-13 18:06:25 | INFO     | modules.builder.code_generation_agent:71 | Generating deployment configuration...
+2026-03-13 18:06:25 | INFO     | modules.builder.code_generation_agent:275 | Attempting to generate deployment config using LLM
+2026-03-13 18:06:25 | WARNING  | modules.builder.code_generation_agent:320 | LLM deployment config generation failed: AzureProvider.invoke() got an unexpected keyword argument 'is_code_generation'
+Traceback (most recent call last):
+  File "C:\Users\vbhaskardonthula\Desktop\Project\Emerson\agent-building-agent\backend\modules\builder\code_generation_agent.py", line 280, in _generate_deployment_config
+    response = self.llm_ctl.invoke(
+               ^^^^^^^^^^^^^^^^^^^^
+TypeError: AzureProvider.invoke() got an unexpected keyword argument 'is_code_generation'
+2026-03-13 18:06:25 | INFO     | modules.builder.code_generation_agent:321 | Using fallback deployment config instead
+2026-03-13 18:06:25 | INFO     | modules.builder.code_generation_agent:73 | Deployment config generated successfully: 394 characters
+2026-03-13 18:06:25 | INFO     | modules.builder.code_generation_agent:75 | Code generation process completed successfully
+2026-03-13 18:06:25 | INFO     | build_process:1005 | Code validation skipped for build (no guardrails/content safety/credentials checks)
+2026-03-13 18:06:25 | INFO     | build_process:1018 | Saving generated code files...
+2026-03-13 18:06:26 | INFO     | build_process:1222 | Build completed successfully!
