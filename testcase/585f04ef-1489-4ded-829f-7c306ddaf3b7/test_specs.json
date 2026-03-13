@@ -1,0 +1,15 @@
+{
+  "name": "Integration - LLM Provider Selection and Initialization",
+  "description": "Verifies that the agent initializes the correct LLM client based on the LLM_PROVIDER environment variable.",
+  "test_type": "integration",
+  "input": "Set LLM_PROVIDER to 'openai' and provide a valid OPENAI_API_KEY in environment variables.",
+  "output": "Agent initializes an AsyncOpenAI client instance.",
+  "success_criteria": [
+    "llm_client is an instance of AsyncOpenAI",
+    "No exception is raised during initialization"
+  ],
+  "error_scenarios": [
+    "ValueError is raised for supported provider",
+    "llm_client is not initialized"
+  ]
+}
