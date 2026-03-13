@@ -1,0 +1,15 @@
+{
+  "name": "Functional - Missing API Key Handling",
+  "description": "Ensures that the agent raises a ValueError when the required API key for the selected LLM provider is missing.",
+  "test_type": "functional",
+  "input": "Environment variables with LLM_PROVIDER set to 'openai' and OPENAI_API_KEY unset.",
+  "output": "A ValueError is raised with the message 'OPENAI_API_KEY is required'.",
+  "success_criteria": [
+    "ValueError is raised",
+    "Error message matches expected text"
+  ],
+  "error_scenarios": [
+    "Exception is not raised when API key is missing",
+    "Incorrect error message"
+  ]
+}
