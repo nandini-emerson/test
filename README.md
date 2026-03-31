@@ -1,7 +1,7 @@
-# Healthcare Employee Attendance Tracker
+# Ecommerce Attendance Tracker Agent edited
 
 ## Overview
-Healthcare Employee Attendance Tracker is a professional healthcare agent designed for text interactions.
+Ecommerce Attendance Tracker Agent edited is a friendly ecommerce agent designed for multimodal interactions.
 
 ## Features
 
@@ -34,12 +34,12 @@ The agent uses the following environment variables:
 ## Usage
 
 ```python
-from agent import Healthcare Employee Attendance TrackerAgent
+from agent import Ecommerce Attendance Tracker Agent editedAgent
 
-agent = Healthcare Employee Attendance TrackerAgent()
+agent = Ecommerce Attendance Tracker Agent editedAgent()
 response = await agent.process_message("Hello!")
 ```
 
-## Domain: healthcare
-## Personality: professional
-## Modality: text
+## Domain: ecommerce
+## Personality: friendly
+## Modality: multimodal

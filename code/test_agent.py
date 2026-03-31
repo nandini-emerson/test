@@ -1,13 +1,13 @@
 import pytest
 import asyncio
 from unittest.mock import Mock, patch
-from agent import HealthcareEmployeeAttendanceTrackerAgent
+from agent import EcommerceAttendanceTrackerAgentEditedAgent
 
-class TestHealthcareEmployeeAttendanceTrackerAgent:
+class TestEcommerceAttendanceTrackerAgentEditedAgent:
     
     @pytest.fixture
     def agent(self):
-        return HealthcareEmployeeAttendanceTrackerAgent()
+        return EcommerceAttendanceTrackerAgentEditedAgent()
     
     @pytest.mark.asyncio
     async def test_process_message(self, agent):
